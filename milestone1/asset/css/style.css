@@ -3,3 +3,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --bgTop: #009688;
+    --bgBottom: #DCDBD2;
+    --barTop: #DCDBD2;
+    --alert: #8EDAFC;
+}
+
+header {
+    width: 100%;
+    height: 125px;
+    background-color: var(--bgTop);
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 125px);
+    background-color: var(--bgBottom);
+}
+
+.widget {
+    width: calc(100% - 144px);
+    height: 800px;
+    background-color: violet;
+    margin: auto;
+    margin-top: -105px;
+    /* margin */
+    /* top: 20px; */
+    /* left: 122px; */
+    /* background-color: var(--barTop); */
+}
