@@ -23,6 +23,10 @@
     float: left;
 }
 
+.d_flex {
+    display: flex;
+}
+
 /* #endregion */
 
 /* #region Background */
@@ -68,7 +72,6 @@ main {
 
 .mainUser {
     width: 497px;
-    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
@@ -76,7 +79,6 @@ main {
 
 .speakerHead {
     width: calc(100% - 497px);
-    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
@@ -89,14 +91,12 @@ main {
 }
 
 .userData {
-    display: flex;
     height: 105px;
     align-items: center;
 }
 
 .icons {
     width: 150px;
-    display: flex;
     justify-content: space-between;
     color: #B1B1B1;
     font-size: 2rem;
@@ -117,7 +117,8 @@ aside {
 .notify {
     background-color: var(--alert);
     height: 120px;
-    display: flex;
+    align-items: center;
+    padding: 1rem;
 }
 
 .notifyImg>i {
@@ -136,4 +137,14 @@ aside {
 
 .searchBar>input {
     width: 100%;
+}
+
+.notifyText {
+    margin-left: .5rem;
+    font-size: 1.5rem;
+}
+
+.notifyText>p:last-child {
+    text-decoration: underline;
+    color: gray;
 }
