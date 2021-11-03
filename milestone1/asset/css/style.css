@@ -71,13 +71,21 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.speakerHead {
+    width: calc(100% - 497px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
 }
 
 .userImg>img {
     width: 75px;
     height: 75px;
     border-radius: 50%;
-    margin-left: 1rem;
 }
 
 .userData {
@@ -87,7 +95,45 @@ main {
 }
 
 .icons {
-    width: 200px;
+    width: 150px;
     display: flex;
     justify-content: space-between;
+    color: #B1B1B1;
+    font-size: 2rem;
+}
+
+.userName {
+    margin-left: 1rem;
+}
+
+.userName>p {
+    color: #B1B1B1;
+}
+
+aside {
+    width: 497px;
+}
+
+.notify {
+    background-color: var(--alert);
+    height: 120px;
+    display: flex;
+}
+
+.notifyImg>i {
+    font-size: 3rem;
+    background-color: white;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.searchBar {
+    background-color: var(--barTop);
+    height: 74px;
+    padding: 2px;
+}
+
+.searchBar>input {
+    width: 100%;
 }
