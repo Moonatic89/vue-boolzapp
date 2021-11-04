@@ -135,7 +135,9 @@ aside {
 }
 
 .notifyImg>i {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 75px;
     background-color: white;
     width: 75px;
     height: 75px;
@@ -181,4 +183,13 @@ aside {
     width: 100%;
     height: 105px;
     background-color: var(--barTop);
+}
+
+.otherUser {
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.active {
+    background-color: lightgray;
 }
