@@ -66,19 +66,32 @@ main {
 
 .head {
     width: 100%;
+}
+
+.mainUser, .speakerHead {
     height: 105px;
     background-color: var(--barTop);
 }
 
-.mainUser {
+/* #region Side */
+
+.sideBlock {
     width: 497px;
+}
+
+.mainUser {
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
 }
 
-.speakerHead {
+/* #endregion */
+
+.mainBlock {
     width: calc(100% - 497px);
+}
+
+.speakerHead {
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
@@ -127,6 +140,7 @@ aside {
     width: 75px;
     height: 75px;
     border-radius: 50%;
+    color: var(--alert);
 }
 
 .searchBar {
@@ -147,4 +161,9 @@ aside {
 .notifyText>p:last-child {
     text-decoration: underline;
     color: gray;
+}
+
+.jumbo {
+    height: calc(100% - 210px);
+    background-image: ;
 }
