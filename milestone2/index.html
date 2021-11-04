@@ -128,34 +128,37 @@
 
                         </div>
 
-                        <div class="jumbo">
+                        <div class="jumbo d_flex">
 
                             <div v-for="message in users[activeId].messages">
-                                <p>{{message.text}}</p>
+                                <p v-bind:class="[(message.status ==
+                                    'received')
+                                    ? `received` : `sent`]">
+                                    {{message.text}}
+                                </p>
 
                             </div>
+                        </div>
 
-                            <div class="chatBarContainer">
+                        <div class="chatBarContainer">
 
-                                <div class="chatBar d_flex">
+                            <div class="chatBar d_flex">
 
-                                    <div class="chatIcon">
-                                        <i class="far fa-smile"></i>
+                                <div class="chatIcon">
+                                    <i class="far fa-smile"></i>
+                                </div>
+
+                                <div class="formGroup">
+                                    <input type="text"> <div
+                                        class="chatPlaceholder">
+                                        <span>Scrivi un messaggio</span>
                                     </div>
 
-                                    <div class="formGroup">
-                                        <input type="text"> <div
-                                            class="chatPlaceholder">
-                                            <span>Scrivi un messaggio</span>
-                                        </div>
+                                </div>
 
-                                    </div>
-
-                                    <div class="chatIcon">
-                                        <i class="fa fa-microphone"
-                                            aria-hidden="true"></i>
-                                    </div>
-
+                                <div class="chatIcon">
+                                    <i class="fa fa-microphone"
+                                        aria-hidden="true"></i>
                                 </div>
 
                             </div>
@@ -166,9 +169,11 @@
 
                 </div>
 
-            </main>
+            </div>
 
-            <script
-                src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-            <script src="./asset/js/app.js"></script></body>
-    </html>
+        </main>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="./asset/js/app.js"></script></body>
+</html>
