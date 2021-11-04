@@ -1,0 +1,254 @@
+/* #region Essentials */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bgTop: #009688;
+    --bgBottom: #DBDBD2;
+    --barTop: #EAEAEA;
+    --alert: #8EDAFC;
+}
+
+.clearfix {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+.f_l {
+    float: left;
+}
+
+.w_10 {
+    width: 10%;
+}
+
+.w_80 {
+    width: 80%;
+}
+
+.d_flex {
+    display: flex;
+}
+
+/* #endregion */
+
+/* #region Background */
+
+.backTop {
+    width: 100%;
+    height: 125px;
+    background-color: var(--bgTop);
+}
+
+.backBot {
+    width: 100%;
+    height: calc(100vh - 125px);
+    background-color: var(--bgBottom);
+}
+
+/* #endregion */
+
+main {
+    /* This is intentional    
+    */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.widget {
+    width: calc(100% - 144px);
+    height: 800px;
+    /* This is temporary*/
+    background-color: cornflowerblue;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.head {
+    width: 100%;
+}
+
+.mainUser, .speakerHead {
+    height: 105px;
+    background-color: var(--barTop);
+}
+
+/* #region Side */
+
+.sideBlock {
+    width: 497px;
+}
+
+.mainUser {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+/* #endregion */
+
+.mainBlock {
+    width: calc(100% - 497px);
+}
+
+.speakerHead {
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.userImg>img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.userData {
+    height: 105px;
+    align-items: center;
+}
+
+.icons {
+    width: 150px;
+    justify-content: space-between;
+    color: #B1B1B1;
+    font-size: 2rem;
+}
+
+.userName {
+    margin-left: 1rem;
+}
+
+.userName>p {
+    color: #B1B1B1;
+}
+
+aside {
+    width: 497px;
+}
+
+.notify {
+    background-color: var(--alert);
+    height: 120px;
+    align-items: center;
+    padding: 1rem;
+}
+
+.notifyImg>i {
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 75px;
+    background-color: white;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    color: var(--alert);
+}
+
+.searchBar {
+    background-color: var(--barTop);
+    height: 75px;
+    padding: .5rem;
+    position: relative;
+}
+
+.searchBar>input {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: none;
+}
+
+.insideText {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translate(0%, -50%);
+    font-size: 1.5em;
+}
+
+.insideText>i {
+    color: gray;
+    padding-right: 1rem;
+}
+
+.sideBar {
+    background-color: white;
+    width: 100%;
+    /* height: calc(800px - 300px); */
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.notifyText {
+    margin-left: .5rem;
+    font-size: 1.5rem;
+}
+
+.notifyText>p:last-child {
+    text-decoration: underline;
+    color: gray;
+}
+
+.jumbo {
+    height: calc(800px - 210px);
+    width: 100%;
+    background-image: url("../../../img/mine.jpg");
+}
+
+.chatBar {
+    width: 100%;
+    height: 105px;
+    background-color: var(--barTop);
+    align-items: center;
+}
+
+.otherUser {
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.active {
+    background-color: lightgray;
+}
+
+.chatBarContainer {
+    position: relative;
+}
+
+.chatBar>.formGroup {
+    flex-grow: 2;
+    height: 100%;
+    padding: 1rem 0;
+}
+
+.chatBar>.formGroup>input {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+}
+
+.chatIcon {
+    color: gray;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.chatPlaceholder {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    color: gray;
+}
