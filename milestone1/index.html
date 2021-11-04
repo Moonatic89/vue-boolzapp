@@ -15,7 +15,7 @@
         <div class="backBot"></div>
         <main>
 
-            <div class="widget">
+            <div id="app" class="widget">
 
                 <div class="head clearfix">
 
@@ -26,7 +26,7 @@
                             <div class="userData d_flex">
 
                                 <div class="userImg">
-                                    <img src="../img/moonstone.jpg" alt="">
+                                    <img src="../img/user.jpg" alt="">
                                 </div>
 
                                 <div class="userName">
@@ -70,102 +70,85 @@
                             </div>
 
                             <div class="sideBar">
-                                <div class="otherUser active d_flex">
-                                    <div class="userImg">
-                                        <img src="../img/Pam.jpg" alt="">
-                                    </div>
-                                    <div class="userName">
-                                        <h3>Pamela</h3>
-                                    </div>
-                                </div>
-                                <div class="otherUser d_flex">
-                                    <div class="userImg">
-                                        <img src="../img/Pam.jpg" alt="">
-                                    </div>
-                                    <div class="userName">
-                                        <h3>Pamela</h3>
-                                    </div>
-                                </div>
-                                <div class="otherUser d_flex">
-                                    <div class="userImg">
-                                        <img src="../img/Pam.jpg" alt="">
-                                    </div>
-                                    <div class="userName">
-                                        <h3>Pamela</h3>
-                                    </div>
-                                </div>
-                                <div class="otherUser d_flex">
-                                    <div class="userImg">
-                                        <img src="../img/Pam.jpg" alt="">
-                                    </div>
-                                    <div class="userName">
-                                        <h3>Pamela</h3>
-                                    </div>
-                                </div>
-                                <div class="otherUser d_flex">
-                                    <div class="userImg">
-                                        <img src="../img/Pam.jpg" alt="">
-                                    </div>
-                                    <div class="userName">
-                                        <h3>Pamela</h3>
-                                    </div>
-                                </div>
-                            </div>
 
-                        </aside>
-                    </div>
+                                <div v-for="(user, index) in users">
 
-                    <div class="mainBlock f_l">
+                                    <div v-bind:class="[(index == activeId) ?
+                                        `active otherUser d_flex` : `otherUser
+                                        d_flex`]">
 
-                        <div class="speakerHead d_flex">
+                                        <div class="userImg">
+                                            <img :src="imagePath + user.avatar +
+                                                '.jpg'"
+                                                alt="">
+                                        </div>
 
-                            <div class="userData d_flex">
+                                        <div class="userName">
+                                            <h3>{{user.name}}</h3>
+                                        </div>
 
-                                <div class="userImg">
-                                    <img src="../img/Pam.jpg" alt="">
-                                </div>
-
-                                <div class="userName">
-                                    <h2>Pamela</h2>
-                                    <p>Ultimo accesso oggi alle</p>
-                                </div>
-
-                            </div>
-
-                            <div class="userControls">
-                                <div class="icons d_flex">
-                                    <i class="fas fa-search"></i>
-                                    <i class="fas fa-paperclip"></i>
-                                    <i class="fa fa-ellipsis-v"></i>
+                                    </div>
 
                                 </div>
-                            </div>
 
+                            </aside>
                         </div>
 
-                        <div class="jumbo">
+                        <div class="mainBlock f_l">
 
-                        </div>
+                            <div class="speakerHead d_flex">
 
-                        <div class="chatBarContainer">
+                                <div class="userData d_flex">
 
-                            <div class="chatBar d_flex">
+                                    <div class="userImg">
+                                        <img :src="imagePath +
+                                            users[activeId].avatar
+                                            + '.jpg'" alt="">
+                                    </div>
 
-                                <div class="chatIcon">
-                                    <i class="far fa-smile"></i>
-                                </div>
-
-                                <div class="formGroup">
-                                    <input type="text"> <div
-                                        class="chatPlaceholder">
-                                        <span>Scrivi un messaggio</span>
+                                    <div class="userName">
+                                        <h2>Pamela</h2>
+                                        <p>Ultimo accesso oggi alle</p>
                                     </div>
 
                                 </div>
 
-                                <div class="chatIcon">
-                                    <i class="fa fa-microphone"
-                                        aria-hidden="true"></i>
+                                <div class="userControls">
+                                    <div class="icons d_flex">
+                                        <i class="fas fa-search"></i>
+                                        <i class="fas fa-paperclip"></i>
+                                        <i class="fa fa-ellipsis-v"></i>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="jumbo">
+
+                            </div>
+
+                            <div class="chatBarContainer">
+
+                                <div class="chatBar d_flex">
+
+                                    <div class="chatIcon">
+                                        <i class="far fa-smile"></i>
+                                    </div>
+
+                                    <div class="formGroup">
+                                        <input type="text"> <div
+                                            class="chatPlaceholder">
+                                            <span>Scrivi un messaggio</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="chatIcon">
+                                        <i class="fa fa-microphone"
+                                            aria-hidden="true"></i>
+                                    </div>
+
                                 </div>
 
                             </div>
@@ -176,11 +159,9 @@
 
                 </div>
 
-            </div>
+            </main>
 
-        </main>
-
-        <script
-            src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-        <script src="./asset/js/app.js"></script></body>
-</html>
+            <script
+                src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+            <script src="./asset/js/app.js"></script></body>
+    </html>
