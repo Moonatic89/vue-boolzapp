@@ -23,6 +23,14 @@
     float: left;
 }
 
+.w_10 {
+    width: 10%;
+}
+
+.w_80 {
+    width: 80%;
+}
+
 .d_flex {
     display: flex;
 }
@@ -148,11 +156,29 @@ aside {
 .searchBar {
     background-color: var(--barTop);
     height: 75px;
-    padding: 2px;
+    padding: .5rem;
+    position: relative;
 }
 
 .searchBar>input {
     width: 100%;
+    height: 100%;
+    background-color: white;
+    border: none;
+}
+
+.insideText {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translate(0%, -50%);
+    font-size: 1.5em;
+}
+
+.insideText>i {
+    color: gray;
+    padding-right: 1rem;
 }
 
 .sideBar {
@@ -183,6 +209,7 @@ aside {
     width: 100%;
     height: 105px;
     background-color: var(--barTop);
+    align-items: center;
 }
 
 .otherUser {
@@ -192,4 +219,36 @@ aside {
 
 .active {
     background-color: lightgray;
+}
+
+.chatBarContainer {
+    position: relative;
+}
+
+.chatBar>.formGroup {
+    flex-grow: 2;
+    height: 100%;
+    padding: 1rem 0;
+}
+
+.chatBar>.formGroup>input {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: none;
+}
+
+.chatIcon {
+    color: gray;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.chatPlaceholder {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    color: gray;
 }
