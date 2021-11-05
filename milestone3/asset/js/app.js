@@ -4,6 +4,7 @@ const app = new Vue(
         data: {
             activeId: 0,
             newMessage: "",
+            newResponse: "",
             imagePath: "../img/user",
             chatInput: "Scrivi un Messaggio",
             users: [
@@ -228,8 +229,24 @@ const app = new Vue(
 
                 }
                 this.users[this.activeId].messages.push(newObject);
+                this.newMessage = "";
+                setTimeout(() => this.addNewResponse(), 3000);
+            },
+            addNewResponse() {
+                const newObject = {
+                    date: "03/08/202  15:30:55",
+                    text: `ok`,
+                    status: "received"
+
+                }
+                this.users[this.activeId].messages.push(newObject);
+                this.newMessage = "";
             }
 
+
         },
+        mounted() {
+
+        }
     }
 )
