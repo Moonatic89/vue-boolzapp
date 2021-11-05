@@ -75,8 +75,7 @@
 
                                     <div v-bind:class="[(index == activeId) ?
                                         `active otherUser d_flex` : `otherUser
-                                        d_flex`]">
-
+                                        d_flex`]" @click="setActiveId(index)">
                                         <div class="userImg">
                                             <img :src="imagePath + user.avatar +
                                                 '.jpg'"
@@ -130,12 +129,13 @@
 
                         <div class="jumbo d_flex">
 
-                            <div v-for="message in users[activeId].messages">
-                                <p v-bind:class="[(message.status ==
-                                    'received')
-                                    ? `received` : `sent`]">
+                            <div v-for="message in users[activeId].messages"
+                                v-bind:class="[(message.status ==
+                                'received')
+                                ? `received` : `sent`]">
+                                <span>
                                     {{message.text}}
-                                </p>
+                                </span>
 
                             </div>
                         </div>

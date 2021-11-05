@@ -54,38 +54,33 @@ const app = new Vue(
                     messages: [
                         {
                             date: "03/08/202  15:30:55",
-                            text: "Hai dato da mangiare a Brando?",
+                            text: "Me lo stamperesti?",
                             status: "received"
                         },
                         {
                             date: "03/08/202  15:35:01",
-                            text: "Si, a pranzo",
+                            text: "Certo",
+                            status: "sent"
+                        },
+                        {
+                            date: "03/08/202  15:35:15",
+                            text: "Serve stasera?",
                             status: "sent"
                         },
                         {
                             date: "03/08/202  15:38:40",
-                            text: "Hai mangiato, quindi, VERO?",
+                            text: "Boh... Se volete",
                             status: "received"
                         },
                         {
                             date: "03/08/202  15:40:05",
-                            text: "Si, amore, si! Tranquilla!",
-                            status: "sent"
-                        },
-                        {
-                            date: "03/08/202  15:40:34",
-                            text: "Tu cos'hai mangiato?",
+                            text: "Vedo se riesco",
                             status: "sent"
                         },
                         {
                             date: "03/08/202  15:41:12",
-                            text: "Mia mamma mi ha fatto il ragù",
+                            text: "Grazie",
                             status: "received"
-                        },
-                        {
-                            date: "03/08/202  15:46:50",
-                            text: "Buono! Portane un po' a casa!",
-                            status: "sent"
                         }
                     ]
                 },
@@ -219,6 +214,11 @@ const app = new Vue(
             ]
 
         },
-        methods: {},
+        methods: {
+            setActiveId(i) {
+                this.activeId = i;
+            }
+
+        },
     }
 )
