@@ -134,19 +134,23 @@
                             <div v-for="(message, index) in
                                 users[activeId].messages"
                                 v-bind:class="[(message.status ==
-                                'received')
-                                ? `received` : `sent`]" class="message d_flex">
-                                <span class="d_flex">
-
+                                'received') ? `received` : `sent`]"
+                                class="message d_flex">
+                                <span @click="message.showDelete=
+                                    !message.showDelete" class="d_flex">
                                     {{message.text}}
 
                                 </span>
 
-                                <div class="eraseBox">
+                                <div class="eraseBox"
+                                    v-show="message.showDelete
+                                    ==
+                                    true">
 
                                     <p @click="deleteMessage(index)">delete
                                         message</p>
-                                    <p>close</p>
+                                    <p @click="message.showDelete=
+                                        !message.showDelete">close</p>
 
                                 </div>
 

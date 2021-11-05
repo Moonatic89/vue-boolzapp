@@ -19,37 +19,50 @@ const app = new Vue(
                         {
                             date: "03/08/202  15:30:55",
                             text: "Hai dato da mangiare a Brando?",
-                            status: "received"
+                            status: "received",
+                            showDelete: false
                         },
                         {
                             date: "03/08/202  15:35:01",
                             text: "Si, a pranzo",
-                            status: "sent"
+                            status: "sent",
+                            showDelete: false
+
                         },
                         {
                             date: "03/08/202  15:38:40",
                             text: "Hai mangiato, quindi, VERO?",
-                            status: "received"
+                            status: "received",
+                            showDelete: false
+
                         },
                         {
                             date: "03/08/202  15:40:05",
                             text: "Si, amore, si! Tranquilla!",
-                            status: "sent"
+                            status: "sent",
+                            showDelete: false
+
                         },
                         {
                             date: "03/08/202  15:40:34",
                             text: "Tu cos'hai mangiato?",
-                            status: "sent"
+                            status: "sent",
+                            showDelete: false
+
                         },
                         {
                             date: "03/08/202  15:41:12",
                             text: "Mia mamma mi ha fatto il ragù",
-                            status: "received"
+                            status: "received",
+                            showDelete: false
+
                         },
                         {
                             date: "03/08/202  15:46:50",
                             text: "Buono! Portane un po' a casa!",
-                            status: "sent"
+                            status: "sent",
+                            showDelete: false
+
                         }
                     ]
                 },
