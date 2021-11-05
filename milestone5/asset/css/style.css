@@ -206,12 +206,6 @@ aside {
     color: gray;
 }
 
-.jumbo {
-    height: calc(800px - 210px);
-    width: 100%;
-    background-image: url("../../../img/mine.jpg");
-}
-
 .chatBar {
     width: 100%;
     height: 105px;
@@ -270,20 +264,39 @@ aside {
 }
 
 .jumbo {
-    flex-direction: column;
+    height: calc(800px - 210px);
     width: 100%;
+    background-image: url("../../../img/mine.jpg");
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 1rem 5rem;
+}
+
+.eraseBox {
+    background-color: whitesmoke;
+    font-size: 1.5rem;
+    width: 150px;
+    border: 1px solid black;
+    justify-content: center;
+}
+
+.message {
+    flex-direction: column;
 }
 
 .jumbo span {
     font-size: 1.5rem;
     padding: .5rem;
-    margin: .7rem 0;
     border-radius: 15px;
     display: inline-block;
 }
 
-.jumbo .sent {
-    text-align: end;
+.message.sent {
+    align-self: end;
+}
+
+.message.received {
+    align-self: start;
 }
 
 .jumbo .sent span {

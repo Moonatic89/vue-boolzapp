@@ -134,10 +134,19 @@
                             <div v-for="message in users[activeId].messages"
                                 v-bind:class="[(message.status ==
                                 'received')
-                                ? `received` : `sent`]">
-                                <span>
+                                ? `received` : `sent`]" class="message d_flex">
+                                <span class="d_flex">
+
                                     {{message.text}}
+
                                 </span>
+
+                                <div class="eraseBox">
+
+                                    <p>delete message</p>
+                                    <p>close</p>
+
+                                </div>
 
                             </div>
                         </div>
