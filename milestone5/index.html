@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Boolzapp Mst1</title>
+        <link rel="stylesheet" href="./asset/css/style.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    </head>
+    <body>
+
+        <div class="backTop"></div>
+        <div class="backBot"></div>
+        <main>
+
+            <div id="app" class="widget">
+
+                <div class="head clearfix">
+
+                    <div class="sideBlock f_l">
+
+                        <div class="mainUser d_flex">
+
+                            <div class="userData d_flex">
+
+                                <div class="userImg">
+                                    <img src="../img/user.jpg" alt="">
+                                </div>
+
+                                <div class="userName">
+                                    <h2>Moonatic</h2>
+                                </div>
+
+                            </div>
+
+                            <div class="userControls">
+                                <div class="icons">
+                                    <i class="fas fa-circle-notch"></i>
+                                    <i class="fas fa-comment-alt"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <aside>
+
+                            <div class="notify d_flex">
+
+                                <div class="notifyImg">
+                                    <i class="fas fa-bell-slash"></i>
+                                </div>
+
+                                <div class="notifyText">
+                                    <p>Ricevi notifiche di nuovi messaggi</p>
+                                    <p>Attiva notifiche destkop</p>
+                                </div>
+                            </div>
+
+                            <div class="searchBar">
+                                <input type="text" v-model="filter" class="fa"
+                                    :placeholder="searchInput">
+                                <div class="insideText">
+                                    <!-- <i class="fas fa-search"></i> -->
+                                    <!-- <span>
+                                        Cerca o inizia una nuova chat
+                                    </span> -->
+                                </div>
+                            </div>
+
+                            <div class="sideBar">
+
+                                <div v-for="(user, index) in users">
+
+                                    <div
+                                        v-show="user.name.toLowerCase().includes(filter)"
+                                        v-bind:class="[(index == activeId) ?
+                                        `active otherUser d_flex` : `otherUser
+                                        d_flex`]" @click="setActiveId(index)">
+                                        <div class="userImg">
+                                            <img :src="imagePath + user.avatar +
+                                                '.jpg'"
+                                                alt="">
+                                        </div>
+
+                                        <div class="userName">
+                                            <h3>{{user.name}}</h3>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                        </aside>
+
+                    </div>
+
+                    <div class="mainBlock f_l">
+
+                        <div class="speakerHead d_flex">
+
+                            <div class="userData d_flex">
+
+                                <div class="userImg">
+                                    <img :src="imagePath +
+                                        users[activeId].avatar
+                                        + '.jpg'" alt="">
+                                </div>
+
+                                <div class="userName">
+                                    <h2>{{users[activeId].name}}</h2>
+                                    <p>Ultimo accesso oggi alle</p>
+                                </div>
+
+                            </div>
+
+                            <div class="userControls">
+                                <div class="icons d_flex">
+                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-paperclip"></i>
+                                    <i class="fa fa-ellipsis-v"></i>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="jumbo d_flex">
+
+                            <div v-for="message in users[activeId].messages"
+                                v-bind:class="[(message.status ==
+                                'received')
+                                ? `received` : `sent`]">
+                                <span>
+                                    {{message.text}}
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <div class="chatBarContainer">
+
+                            <div class="chatBar d_flex">
+
+                                <div class="chatIcon">
+                                    <i class="far fa-smile"></i>
+                                </div>
+
+                                <div class="formGroup">
+
+                                    <input type="text" v-model="newMessage"
+                                        :placeholder="chatInput"
+                                        v-on:keyup.enter="addNewMsg">
+
+                                    <div class="chatPlaceholder">
+                                        <!-- <span>Scrivi un messaggio</span> -->
+                                    </div>
+
+                                </div>
+
+                                <div class="chatIcon">
+                                    <i class="fa fa-microphone"
+                                        aria-hidden="true"></i>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+        <script src="./asset/js/app.js"></script></body>
+</html>
