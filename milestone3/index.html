@@ -74,7 +74,8 @@
 
                                 <div v-for="(user, index) in users">
 
-                                    <div v-show="user.name.includes(filter)"
+                                    <div
+                                        v-show="user.name.toLowerCase().includes(filter)"
                                         v-bind:class="[(index == activeId) ?
                                         `active otherUser d_flex` : `otherUser
                                         d_flex`]" @click="setActiveId(index)">
