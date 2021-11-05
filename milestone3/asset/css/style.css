@@ -244,6 +244,7 @@ aside {
     font-size: 2rem;
 }
 
+/* 
 .chatPlaceholder {
     position: absolute;
     top: 50%;
@@ -251,6 +252,13 @@ aside {
     padding-left: 1rem;
     font-size: 1.5rem;
     color: gray;
+}
+*/
+
+.chatBar>.formGroup>input::placeholder {
+    color: grey;
+    font-size: 1.5rem;
+    transform: translate(1rem, .25rem);
 }
 
 .jumbo {

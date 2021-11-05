@@ -6,7 +6,10 @@ const app = new Vue(
             newMessage: "",
             newResponse: "",
             imagePath: "../img/user",
-            chatInput: "Scrivi un Messaggio",
+            chatInput: "Scrivi un messaggio",
+            filter: "",
+            searchInput: " Cerca o inizia una nuova chat",
+
             users: [
                 {
                     name: "PamDiSpagna",

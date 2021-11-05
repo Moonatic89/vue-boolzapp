@@ -60,12 +60,13 @@
                             </div>
 
                             <div class="searchBar">
-                                <input type="text">
+                                <input type="text" v-model="filter" class="fa"
+                                    :placeholder="searchInput">
                                 <div class="insideText">
-                                    <i class="fas fa-search"></i>
-                                    <span>
+                                    <!-- <i class="fas fa-search"></i> -->
+                                    <!-- <span>
                                         Cerca o inizia una nuova chat
-                                    </span>
+                                    </span> -->
                                 </div>
                             </div>
 
@@ -73,7 +74,8 @@
 
                                 <div v-for="(user, index) in users">
 
-                                    <div v-bind:class="[(index == activeId) ?
+                                    <div v-show="user.name.includes(filter)"
+                                        v-bind:class="[(index == activeId) ?
                                         `active otherUser d_flex` : `otherUser
                                         d_flex`]" @click="setActiveId(index)">
                                         <div class="userImg">
@@ -151,10 +153,11 @@
                                 <div class="formGroup">
 
                                     <input type="text" v-model="newMessage"
+                                        :placeholder="chatInput"
                                         v-on:keyup.enter="addNewMsg">
 
                                     <div class="chatPlaceholder">
-                                        <span>Scrivi un messaggio</span>
+                                        <!-- <span>Scrivi un messaggio</span> -->
                                     </div>
 
                                 </div>
