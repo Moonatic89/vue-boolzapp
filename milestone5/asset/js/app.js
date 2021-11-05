@@ -244,6 +244,10 @@ const app = new Vue(
                 }
                 this.users[this.activeId].messages.push(newObject);
                 this.newMessage = "";
+            },
+            deleteMessage(i) {
+                console.log(i);
+                this.users[this.activeId].messages.splice(i, 1);
             }
 
 
